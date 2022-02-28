@@ -1,0 +1,218 @@
+.banner-section {
+  @include media('screen', '>=tablet') {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .container {
+    max-width: 1282px;
+  }
+
+  .banner-img {
+    
+    @include media('screen', '>=tablet') {
+      position: relative;
+      padding-top: 76px;
+      min-height: 500px;
+      flex: 1;
+    }
+
+    @include media('screen', '>=desktop') {
+      min-height: 650px;
+    }
+
+    @include media('screen', '>=laptop') {
+      min-height: 910px;
+    }
+    
+    .img-wrap {
+      min-height: 382px;
+      position: relative;
+      margin: 0 -15px;
+      padding-top: 82px;
+      
+      @include media('screen', '>=phone-sm') {
+        margin: 0 -20px;
+      }
+      
+      @include media('screen', '>=phone') {
+        min-height: 466px;
+      }
+      
+      @include media('screen', '>=tablet') {
+        position: static;
+        min-height: 0;
+        padding-top: 0;
+        margin: 0;
+      }
+    }
+
+    .bg-slider,
+    .bg {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    .bg {
+      @extend %background;
+      background-position: 0% 50%;
+      left: -70%;
+
+      @include media('screen', '>=phone-sm') {
+        left: -50%;
+        top: 40px;
+      }
+
+      @include media('screen', '>=phone') {
+        top: 0;
+      }
+      
+      @include media('screen', '>=tablet') {
+        left: -40%;
+      }
+
+      @include media('screen', '>=widescreen') {
+        left: -30%;
+      }
+    }
+  }
+  
+  .banner-txt {
+    background-image: linear-gradient(149deg, #c53012 0%, #e34003 100%);
+    margin: 0 -15px;
+    
+    @include media('screen', '>=phone-sm') {
+      margin: 0 -20px;
+    }
+    
+    @include media('screen', '>=tablet') {
+      margin: 0;
+      background: none;
+    }
+  }
+  
+  .header-wrap {
+    padding: 18px 15px;
+    color: $white;
+    text-align: center;
+    
+    @include media('screen', '>=phone-sm') {
+      padding: 18px 22px;
+    }
+    
+    @include media('screen', '>=tablet') {
+      max-width: 340px;
+      margin-left: auto;
+      text-align: left;
+      position: relative;
+      
+      &:before {
+        @include transition(right left);
+        transition-duration: $anim-speed;
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        top: 0;
+        background-image: linear-gradient(117deg, #c53012 0%, #e34003 100%);
+        z-index: -1;
+      }
+    }
+
+    @include media('screen', '>=desktop') {
+      max-width: 460px;
+    }
+
+    @include media('screen', '>=laptop') {
+      max-width: 580px;
+      padding: 39px 22px 18px 30px;
+    }
+
+    @include media('screen', '>=laptop-lg') {
+      max-width: 639px;
+    }
+    
+    h1 {
+      color: $white;
+      margin-bottom: 18px;
+      
+      @include media('screen', '>=tablet') {
+        font-size: 50px;
+      }
+      
+      @include media('screen', '>=desktop') {
+        font-size: 70px;
+      }
+
+      @include media('screen', '>=laptop') {
+        font-size: 89px;
+      }
+
+      @include media('screen', '>=laptop-lg') {
+        font-size: 98px;
+        margin-bottom: 14px;
+      }
+    }
+    
+    .sub-heading {
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      font-weight: 700;
+      letter-spacing: -0.32px;
+
+      @include media('screen', '>=tablet') {
+        margin-bottom: 5px;
+      }
+      
+      @include media('screen', '>=desktop') {
+        font-size: 28px;
+        letter-spacing: 0;
+      }
+
+      @include media('screen', '>=laptop-lg') {
+        padding-left: 17px;
+      }
+    }
+    
+    .author {
+      font-weight: 700;
+
+      @include media('screen', '>=laptop-lg') {
+        padding-left: 20px;
+      }
+    }
+  }
+  
+  .banner-quote {
+    color: $white;
+    text-align: center;
+    display: none;
+    padding: 16px 0 45px;
+    
+    @include media('screen', '>=tablet') {
+      display: block;
+      background-image: linear-gradient(98deg, #c53012 0%, #e34003 100%);
+      padding: 45px 0;
+    }
+
+    @include media('screen', '>=laptop') {
+      padding: 95px 0 92px;
+    }
+    
+    &.quote-sm {
+      display: block;
+      
+      @include media('screen', '>=tablet') {
+        display: none;
+      }
+    }
+  }
+}

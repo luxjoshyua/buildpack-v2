@@ -1,0 +1,257 @@
+.bgslidefromleft {
+  @include transition(transform);
+  transition-duration: $anim-speed;
+  
+  .in-viewport & {
+    transform: translateX(25%);
+    
+    @include media('screen', '>=phone-sm') {
+      transform: translateX(43%);
+    }
+    
+    @include media('screen', '>=tablet') {
+      transform: translateX(12%);
+    }
+
+    @include media('screen', '>=desktop-sm') {
+      transform: translateX(35%);
+    }
+
+    @include media('screen', '>=desktop') {
+      transform: translateX(12%);
+    }
+
+    @include media('screen', '>=desktop-lg') {
+      transform: translateX(35%);
+    }
+
+    @include media('screen', '>=laptop') {
+      transform: translateX(12%);
+    }
+
+    @include media('screen', '>=widescreen-sm') {
+      transform: translateX(30%);
+    }
+    
+    @include media('screen', '>=widescreen') {
+      transform: translateX(26.5%);
+    }
+  }
+}
+
+.bgcolorfromleft {
+  
+  @include media('screen', '>=tablet') {
+    .in-viewport &,
+    &.in-viewport {
+      &:before {
+        right: 0;
+      }
+    }
+  }
+}
+
+.bgcolorfromleft-out {
+  
+  @include media('screen', '>=tablet') {
+    .out-viewport &,
+    &.out-viewport {
+      &:before {
+        right: 0;
+        left: 100%;
+      }
+    }
+  }
+}
+
+.bgcolorfrombottom-out {
+  
+  @include media('screen', '>=tablet') {
+    .out-viewport &,
+    &.out-viewport {
+      &:before {
+        bottom: 100%;
+      }
+    }
+  }
+}
+
+.slidefrombottom-fadein {
+  @include transition(transform opacity);
+  transition-duration: $anim-speed;
+  transform: translateY(100px);
+  opacity: 0;
+  
+  .in-viewport &,
+  &.in-viewport {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  &.d-tab {
+    transform: translateY(0);
+    opacity: 1;
+    
+    @include media('screen', '>=tablet') {
+      transform: translateY(100px);
+      opacity: 0;
+      
+      .in-viewport &,
+      &.in-viewport {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.slidefrombottom-out {
+  @include transition(transform opacity);
+  transition-duration: $anim-speed;
+  
+  .out-viewport &,
+  &.out-viewport {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  
+  &.d-tab {
+    transform: translateY(0);
+    opacity: 1;
+    
+    @include media('screen', '>=tablet') {
+      .out-viewport &,
+      &.out-viewport {
+        transform: translateY(-100px);
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.slidefromtop {
+  @include transition(transform);
+  transition-duration: $anim-speed;
+  transform: translateY(-100px);
+  
+  &.small {
+    transform: translateY(-50px);
+  }
+  
+  .in-viewport &,
+  &.in-viewport {
+    transform: translateY(0);
+  }
+  
+  &.d-tab {
+    transform: translateY(0);
+    
+    @include media('screen', '>=tablet') {
+      transform: translateY(-100px);
+      
+      &.small {
+        transform: translateY(-50px);
+      }
+      
+      .in-viewport &,
+      &.in-viewport {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+.slidefrombottom {
+  @include transition(transform);
+  transition-duration: $anim-speed;
+  transform: translateY(100px);
+  
+  .in-viewport &,
+  &.in-viewport {
+    transform: translateY(0);
+  }
+  
+  &.d-tab {
+    transform: translateY(0);
+    
+    @include media('screen', '>=tablet') {
+      transform: translateY(100px);
+      
+      .in-viewport &,
+      &.in-viewport {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+.slidefromleft {
+  @include transition(transform);
+  transition-duration: $anim-speed;
+  transform: translateX(-100px);
+  
+  .in-viewport &,
+  &.in-viewport {
+    transform: translateX(0);
+  }
+  
+  &.d-tab {
+    transform: translateX(0);
+    
+    @include media('screen', '>=tablet') {
+      transform: translateX(100px);
+      
+      .in-viewport &,
+      &.in-viewport {
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+.fade-in {
+  @include transition(opacity);
+  transition-duration: $anim-speed;
+  opacity: 0;
+  
+  .in-viewport &,
+  &.in-viewport {
+    opacity: 1 !important;
+  }
+}
+
+.delay {
+  transition-delay: 0.2s !important;
+}
+
+.delay-2x {
+  transition-delay: 0.4s !important;
+}
+
+.delay-3x {
+  transition-delay: 0.6s !important;
+}
+
+.delay-4x {
+  transition-delay: 0.8s !important;
+}
+
+.delay-5x {
+  transition-delay: 1s !important;
+  
+  &:before {
+    transition-delay: 1s !important;
+  }
+}
+
+.delay-6x {
+  transition-delay: 1.2s !important;
+}
+
+.delay-7x {
+  transition-delay: 1.4s !important;
+}
+
+.delay-8x {
+  transition-delay: 1.6s !important;
+}

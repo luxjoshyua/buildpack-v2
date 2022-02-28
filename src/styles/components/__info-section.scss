@@ -1,0 +1,98 @@
+.info-section {
+  padding: 20px 0 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  @include media('<tablet') {
+    background-image: none !important;
+  }
+
+  @include media('>=tablet') {
+    display: flex;
+    color: $white;
+    text-align: center;
+    padding: 60px 0;
+  }
+
+  @include media('>=desktop') {
+    padding: 80px 0;
+  }
+
+  @include media('>=1400px') {
+    padding: 100px 0;
+  }
+
+  @include media('>=1600px') {
+    padding: 116px 0;
+  }
+
+  &:after {
+    content: '';
+    font-size: 0;
+    line-height: 0;
+    display: none;
+
+    @include media('>=tablet') {
+      display: block;
+      min-height: 440px;
+    }  
+
+    @include media('>=desktop') {
+      min-height: 500px;
+    }
+
+    @include media('>=1200px') {
+      min-height: 560px;
+    }
+
+    @include media('>=1400px') {
+      min-height: 604px;
+    }
+
+    @include media('>=1600px') {
+      min-height: 648px;
+    }
+  }
+
+  .content {
+    padding: 35px 21px 0;
+
+    @include media('>=tablet') {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto;
+      align-self: flex-start;
+      z-index: 1;
+      padding: 20px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: rgba(53, 125, 168, 0.55);
+      background-blend-mode: darken;
+      filter: blur(50px);
+      display: none;
+
+      @include media('>=tablet') {
+        display: block;
+      }
+    }
+
+    p {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .img {
+    img {
+      width: 100%;
+    }
+  }
+}
