@@ -9,5 +9,9 @@ footer {
     bottom: 0;
     box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.16);
     z-index: 1;
+    
+    .holder {
+      justify-content: center;
+    }
   }
 }
