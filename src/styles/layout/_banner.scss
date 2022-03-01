@@ -27,6 +27,14 @@
       min-height: 600px;
     }
     
+    @include media('screen', '>=widescreen-sm') {
+      min-height: 710px;
+    }
+
+    @include media('screen', '>=widescreen') {
+      min-height: 910px;
+    }
+    
     .img-wrap {
       min-height: 382px;
       position: relative;
@@ -75,6 +83,14 @@
       
       @include media('screen', '>=tablet') {
         left: -52%;
+      }
+      
+      @include media('screen', '>=laptop') {
+        left: -16%;
+      }
+
+      @include media('screen', '>=widescreen-sm') {
+        left: -35%;
       }
 
       @include media('screen', '>=widescreen') {
