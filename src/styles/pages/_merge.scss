@@ -743,6 +743,9 @@
           top: 330px;
           right: -60%;  
         }
+        @include media('>=desktop') {
+          top: 85%;
+        }
       }
     }
   }
