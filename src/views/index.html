@@ -64,7 +64,50 @@
 <link rel="apple-touch-icon"
       sizes="180x180"
       href="https://brandedcontent.nine.com.au/wp-content/uploads/2021/02/apple-touch-icon-180x180-2.png" />
-  <!-- TITAN GTM -->
+  
+  <!--START NINE KIT - LOADER BLOCK 1-->
+  <script type="text/javascript">
+    // Nine Third Party Kit - Loader
+    (function () {
+      var LOADER_SCRIPT_URL =
+        "http://share.9cdn.net/share/short_cache/js/third_party/loaders/au.loader-latest.min.js";
+      var LOADER_SCRIPT_URL_SECURE =
+        "https://share.9cdn.net/share/short_cache/js/third_party/loaders/au.loader-latest.min.js";
+      var loaderScriptUrl =
+        window.location.protocol == "https:"
+          ? LOADER_SCRIPT_URL_SECURE
+          : LOADER_SCRIPT_URL;
+      document.write(
+        "<scr" +
+        'ipt type="text/javascript" src="' +
+        loaderScriptUrl +
+        '"></scr' +
+        "ipt>"
+      );
+    })();
+  </script>
+  <!--END NINE KIT - LOADER BLOCK 1-->
+
+  <!--START NINE KIT - LOADER BLOCK 2-->
+  <script type="text/javascript">
+    NINEAU_Loader.setup();
+    //Nine Third Party Kit - Configurationmsnportalaucatdev
+    NINEAU_Config.setOmnitureSuiteId("msnportalaucatglobal"); // change tp msnportalaucatglobal !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    NINEAU_Config.setCategory("miscellaneous"); // Page Category Name
+    NINEAU_Config.setSiteName("campaign"); // Page Site Name
+    NINEAU_Config.setSectionName("9987-ldvt60-nine"); // Optional - Delete if unneeded.
+    NINEAU_Config.setNielsenEnabled(false);
+    NINEAU_Config.setAdcEnabled(false);
+    NINEAU_Config.setPageTrackingOnRenderTracking(true);
+    NINEAU_ThirdParty.initialize();
+    NINEAU_ThirdParty.renderTracking();
+  </script>
+  <!--END NINE KIT - LOADER BLOCK 2-->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101266782-31"></script>
+  <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag("js", new Date()); gtag("config", "UA-101266782-31"); </script>
+
 </head>
 
 <body class="body">
