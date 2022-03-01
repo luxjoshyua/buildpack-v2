@@ -24,7 +24,7 @@
     }
 
     @include media('screen', '>=laptop') {
-      min-height: 910px;
+      min-height: 600px;
     }
     
     .img-wrap {
@@ -74,7 +74,7 @@
       }
       
       @include media('screen', '>=tablet') {
-        left: -40%;
+        left: -12%;
       }
 
       @include media('screen', '>=widescreen') {
