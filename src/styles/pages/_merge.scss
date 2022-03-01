@@ -864,7 +864,7 @@
     &:nth-child(2) {
       a {
         top: -160px;
-        right: 31%px;
+        right: 31%;
 
         @include media('>=480px') {
           right: calc(50% - 90px);
@@ -915,7 +915,7 @@
     &:nth-child(3) {
       a {
         top: -93px;
-        right: 40%px;
+        right: 40%;
 
         @include media('>=480px') {
           right: calc(50% - 42px);
