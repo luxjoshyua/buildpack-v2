@@ -1,0 +1,10 @@
+// -----------------------------------------------------------------------------
+// This file contains image styles e.g. max-width for small screens.
+// -----------------------------------------------------------------------------
+
+img {
+  // stop images looking stretched on mobile
+  @include breakpoint(tablet) {
+    align-self: center;
+  }
+}

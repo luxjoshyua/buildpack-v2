@@ -1,0 +1,12 @@
+// -----------------------------------------------------------------------------
+// This file contains link styles.
+// -----------------------------------------------------------------------------
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}

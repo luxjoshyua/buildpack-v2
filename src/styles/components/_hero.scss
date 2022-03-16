@@ -1,0 +1,38 @@
+.hero {
+  min-height: 700px;
+  height: $height-100;
+  max-height: 1400px;
+  // background: $black url('../assets/images/common/futurism.jpg') no-repeat center center;
+  text-align: center;
+  background-size: cover;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0;
+  @include breakpoint(mob-lg) {
+    top: $masthead-height-mob;
+  }
+
+  .content-outer {
+    width: 100%;
+    padding: 2vh 2vw;
+    display: flex;
+    align-items: center;
+    .left {
+      max-width: 50vw;
+      position: relative;
+      z-index: 1;
+      .heading-outer {
+        .heading--large {
+          font-size: 12vw;
+          line-height: 1em;
+          text-transform: uppercase;
+          @include letter-spacing(40);
+          text-align: left;
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

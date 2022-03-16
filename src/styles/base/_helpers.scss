@@ -5,11 +5,11 @@
  */
 .hide-text {
   overflow: hidden;
-  padding: 0; /* 1 */
+  padding: 0;
+  /* 1 */
   text-indent: 101%;
   white-space: nowrap;
 }
-
 
 /**
  * Hide element while making it readable for screen readers
@@ -25,4 +25,73 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+.accessibility {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.accessibility:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+%hidden {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.hidden,
+.reader-only {
+  @extend %hidden;
+}
+
+%listreset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+%transition {
+  transition: all 0.3s ease-in-out;
+}
+
+%resetButton {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.resetButton {
+  @extend %resetButton;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }

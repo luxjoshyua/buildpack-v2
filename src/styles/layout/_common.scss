@@ -1,166 +1,54 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the common layout of the site
+// e.g. common containers/wrappers
 // -----------------------------------------------------------------------------
 
-body {
-  background-color: $body-bg;
-  min-width: 320px;
+main {
+  padding: 44px 0 0;
 }
 
 .container {
-  max-width: 1210px;
-  /* 1 */
+  max-width: $container-max-width;
   margin-left: auto;
-  /* 2 */
   margin-right: auto;
-  /* 2 */
   padding-left: $gutter;
-  /* 3 */
   padding-right: $gutter;
-  /* 3 */
   width: 100%;
-  /* 1 */
-  
-  @include media('screen', '>=phone-sm') {
-    padding: 0 20px;
-  }
-  
-  @include media('>=desktop') {
-    padding: 0 35px;
-  }
-  
-  &--fluid {
-    max-width: 100%;
-  }
 }
 
-.wrapper {
-  width: 100%;
+/* stylelint-disable */
+#wrapper {
   position: relative;
-  min-height: 100vh;
-  min-height: var(--full-viewport);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  
-  // iOS viewport height trick: variables --full-viewport is calculated using JS
-  .touchevents & {
-    min-height: var(--full-viewport);
-  }
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 .wrapper-inner {
-  min-height: var(--full-viewport);
   min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  display: -ms-grid;
   display: grid;
+  -ms-grid-rows: auto 1fr auto;
   grid-template-rows: auto 1fr auto;
+  -ms-grid-template-columns: minmax(0, 1fr);
+  -ms-grid-columns: minmax(0, 1fr);
   grid-template-columns: minmax(0, 1fr);
-  overflow: hidden;
-}
 
-.header {
-  grid-row: 1;
-}
-
-.main {
-  grid-row: 2;
-}
-
-.footer {
-  grid-row: 3;
-}
-
-a {
-  @include transition(color background opacity transform box-shadow visibility);
-}
-
-h1,
-.h1 {
-  
-  @include media('screen', '>=phone-sm') {
-    font-size: 89px;
+  #header {
+    -ms-grid-row: 1;
+    grid-row: 1;
   }
-}
 
-h2,
-.h2 {
-  font-weight: 600;
-  line-height: 1.11;
-  margin-bottom: 24px;
-  
-  @include media('screen', '>=desktop') {
-    font-size: 48px;
+  #main {
+    -ms-grid-row: 2;
+    grid-row: 2;
   }
-}
 
-%listreset {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-%background {
-  background: 50% 50% no-repeat;
-  background-size: cover;
-}
-
-img {
-  max-width: 100%;
-  display: inline-block;
-  vertical-align: top;
-  height: auto;
-}
-
-blockquote {
-  margin: 0;
-  max-width: 1000px;
-  margin: 0 auto;
-  
-  q {
-    quotes: none;
-    font-size: 21px;
-    font-weight: 700;
-    text-transform: uppercase;
-    display: block;
-    line-height: 1.375;
-    
-    @include media('screen', '>=laptop') {
-      font-size: 28px;
-      line-height: 1.275;
-    }
+  #footer {
+    -ms-grid-row: 3;
+    grid-row: 3;
   }
-  
-  cite {
-    font-style: normal;
-    font-size: 18px;
-    line-height: 1.56;
-    
-    @include media('screen', '>=laptop') {
-      font-size: 20px;
-      line-height: 1.375;
-    }
-  }
-}
-
-.reader-only {
-  position: absolute;
-  left: -9999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-.accessibility {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-.accessibility:focus {
-  position: static;
-  width: auto;
-  height: auto;
 }

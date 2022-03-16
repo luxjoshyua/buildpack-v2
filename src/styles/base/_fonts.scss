@@ -1,35 +1,45 @@
 // -----------------------------------------------------------------------------
-// This file contains all @font-face declarations, if any.
+// This file contains fonts loaded and typography styles.
 // -----------------------------------------------------------------------------
 
+@import url('https://p.typekit.net/p.css?s=1&k=bea2hgp&ht=tk&f=22710&a=9836756&app=typekit&e=css');
 
-// -----------------------------------------------------------------------------
-//  @Example usage of font-family mixin;
-//
-//  $font-primary: (
-//    'Light': $font-weight-light,
-//    'Regular': $font-weight-normal,
-//  );
-//
-//  $font-secondary: (
-//    'Thin': $font-weight-thin,
-//    'Bold': $font-weight-bold,
-//  );
-//
-//  @param {
-//    $fontName: Filename: string;
-//    $fontWeight: 100|300|400|normal|bold;
-//    $fontStyle: normal/italic/etc;
-//  }
-//
-//  // Filename: Base-Regular.woff
-//  @each $suffix, $weight in $font-primary {
-//    @include fontface('Base', 'Base-#{$suffix}', $weight, normal);
-//  }
-//
-//  @each $suffix, $weight in $font-secondary {
-//    @include fontface('Second Font', '${LocalFontName}-#{$suffix}', $weight, normal);
-//    @include fontface('Second Font', '${LocalFontName}-#{$suffix}Italic', $weight, italic);
-//  }
-// -----------------------------------------------------------------------------
+@mixin font-opentype {
+  -moz-font-feature-settings: 'liga', 'dliga', 'kern', 'onus';
+  -moz-font-feature-settings: 'liga=1', 'dliga=1', 'kern=1', 'onus=1';
+  -ms-font-feature-settings: 'liga', 'dliga', 'kern', 'onus';
+  -o-font-feature-settings: 'liga', 'dliga', 'kern', 'onus';
+  -webkit-font-feature-settings: 'liga', 'dliga', 'kern', 'onus';
+  font-feature-settings: 'liga', 'dliga', 'kern', 'onus';
+}
+@mixin font-smoothing {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: auto;
+}
 
+
+/**
+ * Set up a decent box model on the root element
+ */
+
+html {
+  font-size: $rem-base;
+  scroll-behavior: smooth;
+}
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  @include font-opentype;
+  @include font-smoothing;
+  font-size: 1.6rem;
+  line-height: 2em;
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

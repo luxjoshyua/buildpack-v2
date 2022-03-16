@@ -1,6 +1,7 @@
 import ready, { HTML } from './utils';
 import 'core-js';
 import '@babel/polyfill';
+import 'bootstrap';
 import './utils/polyfills';
 // import initNineHeader from './utils/header';
 import initCloner from './utils/cloner';

@@ -1,0 +1,98 @@
+// -----------------------------------------------------------------------------
+// This file contains all media-query styles.
+// -----------------------------------------------------------------------------
+
+@mixin breakpoint($class) {
+  @if $class == mob-sm {
+    @media (max-width: $mob-sm) {
+      @content;
+    }
+  } @else if $class == mob-an {
+    @media (max-width: $mob-an) {
+      @content;
+    }
+  } @else if $class == mob-md {
+    @media (max-width: $mob-md) {
+      @content;
+    }
+  } @else if $class == mob-lg {
+    @media (max-width: $mob-lg) {
+      @content;
+    }
+  } @else if $class == tablet {
+    @media (max-width: $tablet) {
+      @content;
+    }
+  } @else if $class == desk-sm {
+    @media (max-width: $desk-sm) {
+      @content;
+    }
+  } @else if $class == desk-md {
+    @media (max-width: $desk-md) {
+      @content;
+    }
+  } @else if $class == desk-lg {
+    @media (max-width: $desk-lg) {
+      @content;
+    }
+  } @else if $class == desk-xl {
+    @media (max-width: $desk-xl) {
+      @content;
+    }
+  } @else if $class == desk-xxl {
+    @media (max-width: $desk-xxl) {
+      @content;
+    }
+  } @else if $class == desk-xxxl {
+    @media (min-width: $desk-xxxl) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint mixin supports: mob-xx, tablet, desk-xx";
+  }
+}
+
+.hide-desktop {
+  @media screen and (min-width: $desk-sm) {
+    display: none;
+  }
+}
+
+.hide-tablet {
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.hide-mobile {
+  @media screen and (max-width: $mob-lg) {
+    display: none;
+  }
+}
+
+@include breakpoint(desk-xxxl) {
+}
+
+@include breakpoint(desk-xl) {
+}
+
+@include breakpoint(desk-lg) {
+}
+
+@include breakpoint(desk-md) {
+}
+
+@include breakpoint(desk-sm) {
+}
+
+@include breakpoint(tablet) {
+}
+
+@include breakpoint(mob-lg) {
+}
+
+@include breakpoint(mob-md) {
+}
+
+@include breakpoint(mob-sm) {
+}

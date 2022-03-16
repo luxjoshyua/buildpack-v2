@@ -1,0 +1,183 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header and footer of the site,
+// is only relevant when using a nine masthead
+// -----------------------------------------------------------------------------
+
+header,
+footer {
+  &.masthead {
+    height: 44px;
+    width: 100%;
+    display: flex;
+    background: white;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    position: fixed;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    .header-item {
+      a {
+        display: flex;
+      }
+    }
+    /* NINE HEADER BELOW*/
+    .headersection {
+      display: flex;
+
+      flex: 1;
+
+      a {
+        align-self: center;
+        height: 100%;
+      }
+
+      &:first-child {
+        margin-right: auto;
+        @include breakpoint(desk-sm) {
+          margin-right: 0;
+        }
+        // @include breakpoint(mob-lg) {
+        //   max-width: 120px;
+        // }
+      }
+
+      &:nth-child(2) {
+        justify-content: center;
+        // @include breakpoint(desk-sm) {
+        //   max-width: 120px;
+        // }
+      }
+
+      &:last-child {
+        margin-left: auto;
+        @include breakpoint(desk-sm) {
+          margin-right: 0;
+        }
+        @include breakpoint(mob-lg) {
+          align-items: center;
+          //   left: 80px;
+          //   position: relative;
+        }
+        img {
+          @media screen and (min-width: 701px) {
+            display: none;
+          }
+          max-width: 30px;
+          &.mobile-close {
+            display: none;
+          }
+          &.mobile-menu {
+            display: block;
+          }
+        }
+      }
+
+      svg {
+        width: 78px;
+        color: rgb(130, 73, 255);
+        margin: 10px 10px 10px 15px;
+      }
+
+      a:hover {
+        svg g {
+          fill: rgb(173, 74, 127);
+        }
+        span {
+          color: rgb(173, 74, 127);
+        }
+      }
+
+      .logo {
+        &-span {
+          display: inline-block;
+          z-index: 100;
+          height: 16px;
+          width: 1px;
+          margin-top: 16px;
+          background-color: rgb(255, 138, 215);
+          @include breakpoint(mob-lg) {
+            display: none;
+          }
+        }
+        &-you {
+          display: inline-block;
+          vertical-align: middle;
+          width: auto;
+          position: relative;
+          white-space: nowrap;
+          font-family: 'proxima-nova', Arial, Helvetica, sans-serif;
+          letter-spacing: 1.16px;
+          text-decoration: none;
+          height: 40px;
+          left: 8px;
+          top: 2px;
+
+          padding-bottom: 0px;
+          font-size: 30px;
+          font-weight: 400;
+          line-height: 36px;
+          color: rgb(255, 138, 215);
+          @include breakpoint(mob-lg) {
+            display: none;
+          }
+        }
+        svg {
+          width: 101.64px;
+        }
+      }
+
+      .home9 {
+        margin-right: auto;
+        @include breakpoint(desk-sm) {
+          margin-right: 0;
+        }
+        @include breakpoint(tablet) {
+          border-right: 1px solid rgb(237, 237, 237);
+        }
+        & svg {
+          width: 64px;
+          @include breakpoint(mob-lg) {
+            margin-right: 15px;
+          }
+        }
+      }
+
+      .item {
+        display: block;
+
+        line-height: 44px;
+        color: rgb(152, 152, 152);
+        font-size: 12px;
+        font-weight: bold;
+        margin: 0px 16px;
+        padding: 0px;
+        text-decoration: none;
+        font-family: 'Proxima Nova';
+
+        &:hover {
+          color: black;
+        }
+      }
+
+      .selected {
+        border-bottom: 2px solid rgb(130, 73, 255);
+        color: black;
+      }
+    }
+
+    @media (max-width: 485px) {
+      .item {
+        display: none;
+      }
+    }
+  }
+}
+footer {
+  &.masthead {
+    position: relative;
+    top: initial;
+    bottom: 0;
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.16);
+    z-index: 1;
+  }
+}

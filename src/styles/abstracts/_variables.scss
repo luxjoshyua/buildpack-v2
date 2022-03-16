@@ -1,136 +1,36 @@
-
-// -----------------------------------------------------------------------------
-// This file contains all application-wide Sass variables.
-// -----------------------------------------------------------------------------
-
-
-/// Breakpoints map
-/// @prop {String} keys - Keys are identifiers mapped to a given length
-/// @prop {Map} values - Values are actual breakpoints expressed in pixels
-
-$breakpoints: (
-  'xs-phone': 320px,
-  'phone-sm': 375px,
-  'phone': 520px,
-  'tablet': 768px,
-  'desktop-sm': 920px,
-  'desktop': 1024px,
-  'desktop-lg': 1200px,
-  'laptop': 1280px,
-  'laptop-lg': 1480px,
-  'widescreen-sm': 1440px,
-  'widescreen': 1920px
-);
-
-// keywords
-$media-expressions: (
-  'screen': 'screen',
-  'print': 'print',
-  'handheld': 'handheld',
-  'landscape': '(orientation: landscape)',
-  'portrait': '(orientation: portrait)',
-  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
-  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
-);
-
-
 // Color system
-
 $white: #fff;
 $black: #000;
-$orange: #c53012;
-$orange-e3: #e34003;
-$orange-d8: #d83a0a;
-$gradient: linear-gradient(106deg, $orange 0%, $orange-e3 100%);
+$blue: #4986fc;
 
-// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
-$yiq-contrasted-threshold: 150;
+$mob-sm: 320px;
+$mob-an: 360px;
+$mob-md: 375px;
+$mob-lg: 700px;
+$tablet: 1199px;
+$desk-sm: 1200px;
+$desk-md: 1365px;
+$desk-lg: 1439px;
+$desk-xl: 1919px;
+$desk-xxl: 1920px;
+$desk-xxxl: 2000px;
 
-// Customize the light and dark text colors for use in our YIQ color contrast function.
-$yiq-text-dark: $black;
-$yiq-text-light: $white;
+$masthead-height-desktop: 44px;
+$masthead-height-mob: 44px;
+$height-100: calc(100vh - #{$masthead-height-desktop});
+$min-height: 600px;
+$max-width: 1240px;
+$max-width-true: 1280px;
+$col-spacing: 20px;
 
-// body
-//
-// settings for the `<body>` element.
-
-$body-bg: $white;
-$body-color: $black;
-
-
-$link-color: #0366d6;
-$link-decoration: none;
-$link-hover-color: darken(#0366d6, 5%);
-$link-hover-decoration: none;
-
-// border radius
-$rounded-circle: 50%;
-
-
-// Typography
-//
-// Font, line-height, and color for body text, headings, and more.
-
-// stylelint-disable value-keyword-case
-$font-family-sans-serif: 'Open Sans', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
-$font-family-sans-serif-secondary: 'Lato', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
-$font-family-base: $font-family-sans-serif;
-$base-font-path: '../fonts';
-
-$line-height-base: 1.5;
+// This is the default html and body font-size for the base rem value.
 $rem-base: 10px;
 
+$cols: ();
+@for $i from 1 through 12 {
+  $cols: append($cols, $max-width / 12 * $i);
+}
 
-// container max width, used for .container element
+// Grid
+$container-max-width: 1270px;
 $gutter: 15px;
-$container-max-width: 1140px + $gutter * 2;
-
-
-// Variables for @include fluid-type mixin;
-// This mixin allow fonts to grow from $min viewport width to $max viewport width between sizes that are provided
-//
-$fluid-min: map-get($breakpoints, 'xs-phone');
-$fluid-max: map-get($breakpoints, 'widescreen');
-
-$font-weight-thin: 100;
-$font-weight-ulight: 200;
-$font-weight-light: 300;
-$font-weight-normal: 400;
-$font-weight-medium: 500;
-$font-weight-semibold: 600;
-$font-weight-bold: 700;
-$font-weight-heavy: 800;
-$font-weight-black: 900;
-
-$font-sizes: 16px;
-
-$headings: (
-  'h1, .h1', 'h2, .h2', 'h3, .h3',
-  'h4, .h4', 'h5, .h5', 'h6, .h6'
-);
-
-
-$h1-font-size: 50px;
-$h2-font-size: 36px;
-$h3-font-size: 20px;
-$h4-font-size: 18px !default;
-$h5-font-size: 17px !default;
-$h6-font-size: 15px !default;
-
-$headings-margin-bottom: 1em;
-$headings-line-height: 1.2;
-$headings-font-family: $font-family-sans-serif;
-$headings-color: $orange;
-$headings-font-weight: 600;
-
-// Paragraphs
-
-$paragraph-margin-bottom: 1.4em;
-
-// Base transition function
-$transition-duration-base: 0.35s;
-$transition-easing-base: cubic-bezier(0.3, 0.86, 0.36, 0.95);
-
-//scroll animation properties
-$anim-speed: 1.5s;
-
