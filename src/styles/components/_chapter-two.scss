@@ -3,37 +3,5 @@
 // -----------------------------------------------------------------------------
 
 .chapter {
-  // position: relative;
-
-  .content-outer {
-    width: 100%;
-    padding: 2vh 2vw;
-    display: flex;
-    align-items: center;
-    .left,
-    .right {
-      width: 50vw;
-    }
-  }
-}
-
-.chapter-2 {
-  .content-outer {
-    .left {
-      img {
-        width: 100%;
-      }
-    }
-  }
-}
-
-.chapter-3 {
-  border: 2px solid palegreen;
-  .container {
-    .div-one {
-      h2 {
-        font-size: 20vh;
-      }
-    }
-  }
+  position: relative;
 }

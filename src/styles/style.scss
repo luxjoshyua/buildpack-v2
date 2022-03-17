@@ -8,6 +8,7 @@
 @import '~bootstrap/scss/bootstrap';
 // @import '~swiper/swiper-bundle.min.css';
 // @import 'locomotive-scroll/dist/locomotive-scroll.css';
+// @import '~include-media/dist/include-media';
 
 // 3. Base styles and elements
 @import 'base/reset';
@@ -28,22 +29,5 @@
 @import 'components/hero';
 @import 'components/chapter-two';
 
-
-
-.hero {
-  h1 {
-    font-size: 20vh;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    padding: 2vh;
-    color: #00f;
-  }
-
-
-  h2 {
-    color: red;
-    font-size: 30vh;
-  }
-}
 
 
