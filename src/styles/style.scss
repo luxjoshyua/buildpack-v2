@@ -1,39 +1,49 @@
 // 1. Configuration and helpers
-// @import 'abstracts/variables';
-// @import 'abstracts/browser-queries';
-// @import 'abstracts/functions';
-// @import 'abstracts/media-queries';
-// @import 'abstracts/mixins-utilities';
+@import 'abstracts/variables';
+@import 'abstracts/media-queries';
+@import 'abstracts/browser-queries';
+@import 'abstracts/mixins-utilities';
 
 // 2. Vendors: include media mixins and mormalize imported from node_modules - have removed as we already have reset`
-// @import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap';
 // @import '~swiper/swiper-bundle.min.css';
+// @import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 // 3. Base styles and elements
-// @import 'base/reset';
-// @import 'base/header';
-// @import 'base/animations';
-// @import 'base/base';
-// @import 'base/links';
-// @import 'base/helpers';
-// @import 'base/images';
-// @import 'base/fonts';
+@import 'base/reset';
+@import 'base/header';
+@import 'base/animations';
+@import 'base/base';
+@import 'base/links';
+@import 'base/helpers';
+@import 'base/fonts';
+@import 'base/images';
 
 // 4. Layout
-// @import 'layout/common';
-// @import 'layout/nine-masthead';
-// @import 'layout/integration-message';
+@import 'layout/common';
+@import 'layout/nine-masthead';
+@import 'layout/integration-message';
 
 // 5. Components
-// @import 'components/hero';
-// @import 'components/chapter-two';
+@import 'components/hero';
+@import 'components/chapter-two';
+
 
 
 .hero {
   h1 {
     font-size: 20vh;
-    color: royalblue;
     text-transform: uppercase;
     letter-spacing: 5px;
+    padding: 2vh;
+    color: #00f;
+  }
+
+
+  h2 {
+    color: red;
+    font-size: 30vh;
   }
 }
+
+

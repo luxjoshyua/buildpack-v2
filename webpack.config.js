@@ -145,6 +145,7 @@ const pluginsConfiguration = {
     configFile: 'stylelint.config.js',
     context: getAssetPath(SRC, config.styles.src),
     syntax: config.styles.extension,
+    emitError: false,
   },
   ESLint: {
     overrideConfigFile: 'eslintrc.js',
