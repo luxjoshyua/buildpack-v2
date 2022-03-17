@@ -1,7 +1,4 @@
-import touchevents from './detectTouch';
-import './resizeHandler';
-import './vh';
-
+// import './resizeHandler';
 export const HTML = document.documentElement;
 export const BODY = document.body;
 export const BREAKPOINTS = {
