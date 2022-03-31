@@ -553,7 +553,6 @@ const getEntries = () => {
   }
 
   if (config.styles) {
-    console.log('getting here');
     // default CSS entry {main.scss} - used for all pages, if no specific entry is provided
     const entryCSSFile = join(config.styles.src, `${config.styles.bundle}.${config.styles.extension}`);
     const styleAsset = getAssetPath(SRC, entryCSSFile);
