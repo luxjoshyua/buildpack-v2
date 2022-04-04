@@ -8,9 +8,9 @@ import './utils/polyfills';
 import './utils/animations';
 import './utils/anchorLink';
 import './plugins/header';
+import './plugins/parallax';
 
 ready(() => {
   HTML.classList.add('is-loaded');
   // initInViewport();
-  // inittabs();
 });
