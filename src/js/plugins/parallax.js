@@ -1,8 +1,6 @@
 import simpleParallax from 'simple-parallax-js';
-import 'rellax';
+import Rellax from 'rellax';
 import LocomotiveScroll from 'locomotive-scroll';
-
-
 
 const parallaxImgs = document.querySelectorAll('.parallax-img');
 new simpleParallax(parallaxImgs, {
@@ -10,15 +8,14 @@ new simpleParallax(parallaxImgs, {
   transition: 'cubic-bezier(0,0,0,1)',
 });
 
-console.log(`parallax image = ${parallaxImgs}`)
+console.log('parallax images = ', parallaxImgs);
 
 const rellax = new Rellax('.rellax', {
   speed: -2,
   center: true,
 });
 
-console.log(`rellax = ${rellax}`);
-
+console.log('rellax = ', rellax);
 
 const locomotiveScroll = new LocomotiveScroll({
   el: document.querySelector('[data-scroll-container]'),
@@ -28,7 +25,7 @@ const locomotiveScroll = new LocomotiveScroll({
   inertia: 0.75,
 });
 
-console.log(`locomotive scroll = ${locomotiveScroll}`)
+console.log('locomotive scroll = ', locomotiveScroll);
 
 document.addEventListener('DOMContentLoaded', function () {
   function ScrollUpdateDelay() {
@@ -39,5 +36,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
   ScrollUpdateDelay();
 });
-
-
