@@ -6,5 +6,5 @@ import './components/masthead';
 import './utils/polyfills';
 import './utils/animations';
 import './utils/anchorLink';
-import './plugins/header';
+import './plugins/headroom';
 import './plugins/parallax';
