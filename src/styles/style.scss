@@ -6,9 +6,10 @@
 
 // 2. Vendors: include media mixins and mormalize imported from node_modules - have removed as we already have reset`
 @import '~bootstrap/scss/bootstrap';
+@import '~include-media/dist/include-media';
 // @import '~swiper/swiper-bundle.min.css';
 // @import 'locomotive-scroll/dist/locomotive-scroll.css';
-// @import '~include-media/dist/include-media';
+
 
 // 3. Base styles and elements
 @import 'base/reset';
@@ -21,7 +22,7 @@
 @import 'base/images';
 
 // 4. Layout
-@import 'layout/common';
+// @import 'layout/common';
 @import 'layout/nine-masthead';
 @import 'layout/integration-message';
 

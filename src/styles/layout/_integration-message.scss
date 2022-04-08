@@ -2,6 +2,16 @@
 // This file contains all integration messages at the top and bottom styles.
 // -----------------------------------------------------------------------------
 
+@keyframes transformDown {
+  0% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .integration-message {
   @include centreContent;
   flex-direction: column;
@@ -47,7 +57,9 @@
 
 header {
   &.integration-message {
-    top: 70px;
+    top: 60px;
+    animation: transformDown 2s ease-in forwards;
+    opacity: 0;
   }
 }
 footer {

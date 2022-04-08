@@ -3,4 +3,4 @@ src/styles/vendors/*
 src/styles/vendors-extensions/*
 src/styles/base/*
 src/js/vendors/*
-src/js/utils/*
+src/styles/abstracts/media-queries

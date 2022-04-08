@@ -12,16 +12,25 @@ module.exports = {
     'import/resolver': 'webpack',
   },
   rules: {
-    'prettier/prettier': ['error', {
-      'endOfLine': 'auto',
-    }],
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
     'no-console': ['off'],
-    'no-unused-expressions': ['error', {
-      'allowTernary': true,
-      'allowShortCircuit': true,
-    }],
-    'no-plusplus': ['error', {
-      'allowForLoopAfterthoughts': true
-    }]
+    'no-unused-expressions': [
+      'error',
+      {
+        allowTernary: true,
+        allowShortCircuit: true,
+      },
+    ],
+    'no-plusplus': [
+      'error',
+      {
+        allowForLoopAfterthoughts: true,
+      },
+    ],
   },
 };

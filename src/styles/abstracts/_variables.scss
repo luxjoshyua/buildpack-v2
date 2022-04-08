@@ -34,3 +34,14 @@ $cols: ();
 // Grid
 $container-max-width: 1270px;
 $gutter: 15px;
+
+$breakpoints: (
+  'mobile-sm': 380px,
+  'mobile': 700px,
+  'tablet': 1000px,
+  'desk-sm': 1200px,
+  'desk-md': 1400px,
+  'desk-lg': 1600px,
+  'desk-xl': 2000px,
+  'desk-xxl': 2400px,
+);
