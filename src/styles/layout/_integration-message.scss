@@ -29,28 +29,30 @@
   @include breakpoint(mob-lg) {
     width: 250px;
   }
-  .integration-text {
-    font-family: lato, sans-serif;
-    color: $white;
-    font-size: 0.9rem;
-    line-height: 1em;
-    font-weight: 400;
-    letter-spacing: 0px;
-    margin: 0 0 0px;
-    padding-bottom: 12px;
-    text-transform: uppercase;
+
+}
+
+.integration-text {
+  font-family: lato, sans-serif;
+  color: $white;
+  font-size: 0.9rem;
+  line-height: 1em;
+  font-weight: 400;
+  letter-spacing: 0px;
+  margin: 0 0 0px;
+  padding-bottom: 12px;
+  text-transform: uppercase;
+}
+.integration-logo {
+  img {
+    width: 100px;
+    height: auto;
+    transition: 0.2s ease-in-out;
   }
-  .integration-logo {
+  &:hover {
     img {
-      width: 100px;
-      height: auto;
+      transform: scale(1.05);
       transition: 0.2s ease-in-out;
-    }
-    &:hover {
-      img {
-        transform: scale(1.05);
-        transition: 0.2s ease-in-out;
-      }
     }
   }
 }
