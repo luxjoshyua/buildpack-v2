@@ -54,18 +54,18 @@
 
 .hide-desktop {
   @media screen and (min-width: $desk-sm) {
-    display: none;
+    display: none !important;
   }
 }
 
 .hide-tablet {
   @media screen and (max-width: $tablet) {
-    display: none;
+    display: none !important;
   }
 }
 
 .hide-mobile {
   @media screen and (max-width: $mob-lg) {
-    display: none;
+    display: none !important;
   }
 }

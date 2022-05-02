@@ -2,18 +2,38 @@
 // This file contains all mixins and utility styles.
 // -----------------------------------------------------------------------------
 
-@mixin centreContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .w-100vw {
   width: 100vw;
 }
 
 .w-100 {
   width: 100%;
+}
+
+.text-white {
+  color: $white;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
+
+.img-abs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  pointer-events: none;
+  width: 100%;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .reader-only {
@@ -25,14 +45,6 @@
   overflow: hidden;
   padding: 0;
   position: absolute;
-}
-
-.pb-0 {
-  padding-bottom: 0;
-}
-
-.text-white {
-  color: $white;
 }
 
 .grid {

@@ -15,7 +15,7 @@
 .integration-message {
   @include centreContent;
   flex-direction: column;
-  width: 300px;
+  width: 100%;
   display: inline-block;
   position: absolute;
   top: 0px;
@@ -25,11 +25,6 @@
   z-index: 10;
   display: block;
   text-align: center;
-
-  @include breakpoint(mob-lg) {
-    width: 250px;
-  }
-
 }
 
 .integration-text {
