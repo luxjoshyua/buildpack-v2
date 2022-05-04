@@ -7,6 +7,7 @@ new Swiper('.swiperOne', {
   loop: true,
   centeredSlides: true,
   spaceBetween: 20,
+  speed: 800,
   navigation: {
     nextEl: '.nav-right',
     prevEl: '.nav-left',
