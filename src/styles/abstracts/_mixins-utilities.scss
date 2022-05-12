@@ -23,6 +23,12 @@
 }
 
 
+@mixin centreContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .img-abs {
   position: absolute;
   top: 0;
