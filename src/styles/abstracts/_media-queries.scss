@@ -53,19 +53,25 @@
 }
 
 .hide-desktop {
-  @media screen and (min-width: $desk-sm) {
+  @include media('>tablet') {
+    display: none !important;
+  }
+}
+
+.hide-small-screens {
+  @include media('>=zero', '<=tablet') {
     display: none !important;
   }
 }
 
 .hide-tablet {
-  @media screen and (max-width: $tablet) {
+  @include media('>mobile', '<=tablet') {
     display: none !important;
   }
 }
 
 .hide-mobile {
-  @media screen and (max-width: $mob-lg) {
+  @include media('>=zero', '<=tablet') {
     display: none !important;
   }
 }
