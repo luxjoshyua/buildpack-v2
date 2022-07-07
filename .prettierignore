@@ -1,4 +1,4 @@
-src/styles/*.scss
+# src/styles/*.scss
 src/styles/vendors/*
 src/styles/vendors-extensions/*
 src/styles/base/*

@@ -7,4 +7,19 @@
   align-items: flex-start;
   padding: 0;
   flex-direction: column;
+  .container {
+    width: 100%;
+    max-width: 80vw;
+    margin: 0 auto;
+    padding: 10vh 5vw;
+    h1 {
+      font-size: 20vh;
+      line-height: 1em;
+      color: lawngreen;
+      span {
+        font-size: 10vh;
+        color: peachpuff;
+      }
+    }
+  }
 }
