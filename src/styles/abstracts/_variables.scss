@@ -46,3 +46,27 @@ $breakpoints: (
   'desk-xl': 2000px,
   'desk-xxl': 2400px,
 );
+
+/* > 1000px && <= 1500px */
+@include media('>tablet', '<=desk-lg') {
+}
+
+// > 1000px && <= 1400px
+@include media('>tablet', '<=desk-md') {
+}
+
+// > 1000px && <= 1300px
+@include media('>tablet', '<=desk-sm') {
+}
+
+/* mobile and tablet */
+@include media('>=zero', '<=tablet') {
+}
+
+/* tablet only */
+@include media('>mobile', '<=tablet') {
+}
+
+/* mobile */
+@include media('>=zero', '<=mobile') {
+}
