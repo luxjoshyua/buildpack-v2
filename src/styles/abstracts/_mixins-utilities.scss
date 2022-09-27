@@ -22,7 +22,6 @@
   padding-bottom: 0;
 }
 
-
 @mixin centreContent {
   display: flex;
   justify-content: center;
@@ -62,68 +61,6 @@
   position: absolute;
 }
 
-.grid {
-  opacity: 0.6;
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  bottom: 0;
-  right: 0;
-  height: 100%;
-  z-index: 10000;
-  pointer-events: none;
-  .columns {
-    max-width: $max-width;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    .column {
-      display: flex;
-      width: nth($cols, 12);
-      margin: 0 12px;
-      background-color: #ff8ad7;
-      height: 100vh;
-      &:first-child {
-        margin-left: 0;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-}
-
-.cols {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  @include breakpoint(desk-sm) {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-.cols > .cols {
-  @include breakpoint(desk-sm) {
-    padding: 0;
-  }
-}
-
-@for $i from 1 through 12 {
-  .col-#{$i} {
-    width: calc(#{$max-width} / 12 * #{$i});
-    padding: 0;
-  }
-}
-
-@for $i from 1 through 12 {
-  .col-spacer-#{$i} {
-    padding-left: calc(#{$max-width-true} / 12 * #{$i});
-  }
-}
-
 .anchor {
   top: -$masthead-height-desktop;
   height: 0;
@@ -131,27 +68,8 @@
   position: relative;
   visibility: hidden;
 }
-@mixin letter-spacing($spacing) {
-  // letter-spacing: ($spacing / 1000) * 1em;
-  // letter-spacing: calc($spacing / 1000) * 1em;
-}
 
-.col-1,
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-10,
-.col-11,
-.col-12 {
-  @include breakpoint(desk-sm) {
-    width: 100%;
-  }
-  @include breakpoint(tablet) {
-    max-width: 100%;
-  }
+@mixin letter-spacing($spacing) {
+  letter-spacing: ($spacing / 1000) * 1em;
+  // letter-spacing: calc($spacing / 1000) * 1em;
 }
