@@ -6,4 +6,11 @@
   align-items: flex-start;
   padding: 0;
   flex-direction: column;
+  background-color: plum;
+  h1 {
+    font-size: 15vh;
+    color: blue;
+    height: 100vh;
+    @include centreContent;
+  }
 }
