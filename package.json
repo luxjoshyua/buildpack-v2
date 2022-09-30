@@ -94,7 +94,7 @@
   },
   "git": {
     "scripts": {
-      "pre-push": "npm run build && npx surge --project ./dist --domain brand-name-staging.surge.sh"
+      "pre-deploy": "npm run build && npx surge --project ./dist --domain brand-name-staging.surge.sh"
     }
   },
   "version": "2.1.12"
