@@ -8,10 +8,8 @@
 
 // 2. Vendors: include media mixins and mormalize imported from node_modules - have removed as we already have reset`
 @import '~bootstrap/scss/bootstrap';
-
 // @import '~swiper/swiper-bundle.min.css';
 // @import 'locomotive-scroll/dist/locomotive-scroll.css';
-
 
 // 3. Base styles and elements
 @import 'base/reset';
@@ -35,6 +33,3 @@
 @import 'components/chapter-four';
 @import 'components/chapter-five';
 @import 'components/chapter-six';
-
-
-
