@@ -3,7 +3,7 @@ import '@babel/polyfill';
 import 'bootstrap';
 
 import './components/gallery';
-import './components/masthead';
+// import './components/masthead';
 
 import './utils/polyfills';
 import './utils/animations';
