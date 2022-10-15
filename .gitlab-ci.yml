@@ -5,11 +5,20 @@ before_script:
 
 variables:
   SURGE_DOMAIN: https://luxjoshyua-staging.surge.sh
-  SURGE_TOKEN: 6822396678785becc1700323e270c605
+
+build:
+  stage: build
+  before_script:
+    - npm run ci
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - build
 
 deploy:
   stage: deploy
   before_script:
     - npm install -g surge
   script:
-    - surge ./dist $SURGE_DOMAIN --token $SURGE_TOKEN .
+    - surge ./dist $SURGE_DOMAIN --token $SURGE_TOKEN
