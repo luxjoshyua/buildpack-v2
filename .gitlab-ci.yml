@@ -1,6 +1,3 @@
-# gitlab-ci.yaml
-# you can use any versions here but I'm fine with this version
-image: node:14.18.2
 # we just want to cache our package-lock and node_modules during the stages
 cache:
   key:
